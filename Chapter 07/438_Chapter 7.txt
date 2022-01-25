@@ -1,0 +1,261 @@
+Number abs() method
+
+1.	>>> print(abs(34.55))
+2.	34.55
+3.	>>> print(abs(45))
+4.	45
+5.	>>> print(abs(-467))
+6.	467
+7.	>>> print(abs(-33.55))
+8.	33.55
+
+
+Number ceil() method
+
+1.	>>> import math
+2.	>>> print(math.ceil(12.23))
+3.	13
+4.	>>> print(math.ceil(-34.33))
+5.	-34
+6.	>>> print(math.ceil(278.555))
+7.	279
+
+
+Number exp() method 
+
+1.	>>> print(math.exp(45))
+2.	3.4934271057485095e+19
+3.	>>> print(math.exp(-45.17))
+4.	2.4150062132629406e-20
+5.	>>> print(math.exp(math.pi))
+6.	23.140692632779267
+
+
+Number fabs() method 
+
+1.	>>> import math
+2.	>>>print( math.fabs(34.67))
+3.	34.67
+4.	>>> print(math.fabs(-34.4))
+5.	34.4
+6.	>>> print(math.fabs(-34))
+7.	34.0
+8.	>>>math.fabs(math.pi)
+9.	3.141592653589793
+
+
+Number floor() method
+
+1.	>>> print(math.floor(22.67))
+2.	22
+3.	>>> print(math.floor(39.9))
+4.	39
+5.	>>> print(math.floor(-36.9))
+6.	-37
+7.	>>> print(math.floor(-56.2))
+8.	-57
+
+
+Number log() method 
+
+1.	>>> print(math.log(22.67))
+2.	3.1210424645194377
+3.	>>> print(math.log(100.45))
+4.	4.609660091260944
+5.	>>> print(math.log(math.pi))
+6.	1.1447298858494002
+
+
+Number log10() method 
+
+1.	>>> print(math.log10(22.67))
+2.	1.3554515201265174
+3.	>>> print(math.log10(100.45))
+4.	2.001949941084268
+5.	>>> print(math.log10(math.pi))
+6.	0.49714987269413385
+
+
+Number modf() method
+
+1.	>>> print(math.modf(34.56))
+2.	(0.5600000000000023, 34.0)
+3.	>>> print(math.modf(100))
+4.	(0.0, 100.0)
+5.	>>> print(math.modf(math.pi))
+6.	(0.14159265358979312, 3.0)
+7.	>>> print(math.modf(-67.54))
+8.	(-0.5400000000000063, -67.0)
+
+
+Number pow() method 
+
+1.	>>> print(pow(4,3))
+2.	64
+3.	>>> print(pow(2,7))
+4.	128
+5.	>>> print(pow(5,5,3))
+6.	2
+7.	>>> print(pow(6,7,4))
+8.	0
+
+
+Number sqrt() method 
+
+1.	>>> print(math.sqrt(16))
+2.	4.0
+3.	>>> print(math.sqrt(23))
+4.	4.795831523312719
+5.	>>> print(math.sqrt(math.pi))
+6.	1.7724538509055159
+
+
+Number round() method 
+
+1.	>>> round(55.7)
+2.	56
+3.	>>> round(23.345,2)
+4.	23.34
+5.	>>> round(78.23,-2)
+6.	100.0
+7.	>>> round(18.23,-2)
+8.	0.0
+9.	>>> round(25.234,-1)
+10.	30.0
+11.	>>> round(23.345,3)
+12.	23.345
+13.	>>> round(23.345,1)
+14.	23.3
+15.	>>> round(23.345,0)
+16.	23.0
+
+
+Number choice() method 
+
+1.	>>> a="hello world"
+2.	>>>random.choice(a)
+3.	'l'
+4.	>>>random.choice((2,4,5,6,7,1))
+5.	2
+6.	>>>random.choice(["ram","rom","prom",45,22])
+7.	'prom'
+8.	>>>random.choice("hello")
+9.	'e'
+
+
+Number randrange() method
+
+1.	>>> import random
+2.	>>> print ("randrange(1,100, 2) : ", random.randrange(1, 100, 2))
+3.	randrange(1,100, 2) :  11
+4.	>>> print ("randrange(100) : ", random.randrange(100))
+5.	randrange(100) :  86
+
+
+Number random() method
+
+1.	>>> import random
+2.	>>> print ("random() : ", random.random())
+3.	random() :  0.9279919237961513
+4.	>>> print ("random() : ", random.random())
+5.	random() :  0.9800448891204537
+
+
+Number seed() method
+
+1.	import random iop
+2.	random.seed() 
+3.	print ("random number with default seed 11", random.random()) 
+4.	random.seed(110) 
+5.	print ("random number with int seed", random.random()) 
+6.	random.seed("hello",2)  {when seeded with a string “hello”, the hash() of the string is used as the seed value during randomization.}
+7.	print ("random numbers with string seed", random.random())
+
+
+Number shuffle() method 
+
+1.	import random 
+2.	random.seed() number_list = [7,14,21, 28, 35, 42, 49, 56, 63, 70]  
+3.	print ("random number with default seed", random.random())random.shuffle(number_list) 
+4.	random.seed(10) 
+5.4.	print ("random number with int seed", random.random()) 
+6.	random.seed("hello",2) 
+7.	print ("random number with string seed", random.random())
+
+Number uniform() method
+
+1.	import random 
+2.	>>> print ("Random Float uniform(5, 10) : ",  random.uniform(5, 10))
+3.	Random Float uniform(5, 10) :  8.315992905134308
+
+
+Number acos() method
+
+1.	import math
+2.	print ("acos(0.46) : ",  math.acos(0.64))
+3.	print ("acos(0) : ",  math.acos(0))
+
+
+Number asin() method
+
+1.	import math
+2.	print ("asin(0.46) : ",  math.asin(0.64))
+3.	print ("asin(-2) : ",  math.asin(-1))
+4.	Output
+5.	asin(0.46) :  0.694498265626556
+6.	asin(-2) :  -1.5707963267948966
+7.	
+
+
+Number atan() method 
+
+1.	import math 
+2.	>>> print ("atan(0) : ",  math.atan(0))
+3.	atan(0) :  0.0
+
+
+Number atan2() method
+
+1.	import math
+2.	print ("atan2(-1.50,-1.50) : ",  math.atan2(-0.50,-0.50))
+3.	
+4.	Output
+5.	atan2(-1.50,-1.50) :  -2.356194490192345
+
+
+Number cos() method
+
+1.	>>> import math
+2.	>>> print ("cos(3) : ",  math.cos(3))
+3.	cos(3) :  -0.9899924966004454
+
+
+Number hypot() method
+
+1.	>>> import math
+2.	>>> print ("hypot(3, 2) : ",  math.hypot(3, 2))
+3.	hypot(3, 2) :  3.605551275463989
+
+
+Number degrees() method
+
+1.	>>> import math
+2.	>>> print ("degrees(3) : ",  math.degrees(3))
+3.	degrees(3) :  171.88733853924697
+4.	>>> print ("degrees(-3) : ",  math.degrees(-3))
+5.	degrees(-3) :  -171.88733853924697
+
+
+Number radians() method 
+
+1.	>>> import math
+2.	>>> print ("radians(3) : ",  math.radians(3))
+3.	radians(3) :  0.05235987755982989
+4.	>>> print ("radians(-3) : ",  math.radians(-3))
+5.	radians(-3) :  -0.05235987755982989
+
+
+
+
+
+

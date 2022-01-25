@@ -1,0 +1,67 @@
+Variables and Assignment
+
+1.	rollno=123
+2.	name="XYZ"
+3.	marks=93.67
+4.	print("NAME is %s\nROLLNO is %d\nMARKS are %f" %(name,rollno,marks))
+5.	NAME is XYZ
+6.	ROLLNO is 123
+7.	MARKS are 93.670000
+
+
+Strings
+
+1.	str = ‘Let us study Python' 
+2.	print (str)          
+3.	print (str[0])       
+4.	print (str[2:5])      
+5.	print (str[2:])       
+6.	print (str * 2)   
+7.	print (str + "TEST") 
+
+
+Lists
+
+1.	list = [ 'abcd', 786 , 2.23, 'xyz', 70.2 ] 
+2.	tinylist = [123, 'xyz'] 
+3.	print (list)           
+4.	print (list[0])        
+5.	print (list[1:3])       
+6.	print (list[2:])       
+7.	print (tinylist * 2)  
+8.	print (list + tinylist)
+
+
+Tuples
+
+1.	tuple = ( 'abcd', 786 , 2.23, 'xyz', 70.2  ) 
+2.	tinytuple = (123, 'xyz') 
+3.	print (tuple)        
+4.	print (tuple[0])      
+5.	print (tuple[1:3]) 
+6.	print (tuple[2:])       
+7.	print (tinytuple * 2)   
+8.	print (tuple + tinytuple) 
+
+
+1.	tuple = ( 'abcd', 786 , 2.23, 'xyz', 70.2  ) 
+2.	list = [ 'abcd', 786 , 2.23, 'xyz', 70.2  ] 
+3.	list[2] = 1000  
+4.	print(list)
+5.	tuple[2] = 1000
+6.	print(tuple)
+
+Dictionary
+
+1.	dict = {} 
+2.	dict['three'] = "This is three" 
+3.	dict[3]     = "This is three" 
+4.	tinydict = {'name': ‘ymbc','code':3010, 'dept': 'education'} 
+5.	print (dict['one'])     
+6.	print (dict[2])      
+7.	print (tinydict)        
+8.	print (tinydict.keys())
+9.	print (tinydict.values())
+
+
+

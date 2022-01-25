@@ -1,0 +1,349 @@
+Creating Classes
+
+1.	class MyNewClass:  
+2.	'''This is a docstring. I have created a new class'''
+3.	     pass
+
+
+
+The __init__   method
+
+1.	class student:
+2.	    'This is my first program using classes'
+3.	def __init__(self,name,age):
+4.	        self.name=name
+5.	self.age=age
+6.	def display(self):
+7.	        print("name = ",self.name)
+8.	        print("age = ",self.age)
+
+
+
+Creating Instance Objects
+
+
+1.	#creating  objects
+2.	ob1=student("Rohit",21)
+3.	ob2=student("Divanshi",20)
+
+
+
+Accessing Attributes
+
+1.	ob1.display()
+2.	ob2.display()
+
+
+
+
+1.	class student:
+2.	    'This is my first program using classes'
+3.	def __init__(self,name,age):
+4.	        self.name=name
+5.	self.age=age
+6.	def display(self):
+7.	        print("name = ",self.name)
+8.	        print("age = ",self.age)
+9.	#creating an object
+10.	ob1=student("Rohit",21)
+11.	ob2=student("Divanshi",20)
+12.	ob1.display()
+13.	ob2.display()
+
+
+
+
+
+1.	hasattr(ob1, 'age')    # Returns true if 'age' attribute exists 
+2.	getattr(ob1, 'name')    # Returns value of 'age' attribute 
+3.	setattr(ob1, 'age', 17) # Set attribute 'age' at 17 of ob1
+4.	delattr(ob2, 'age')    # Delete attribute 'age' of ob2
+
+
+
+
+
+Built-In Class Attributes
+
+1.	class Student:
+2.	    'This is my first program using classes'
+3.	def __init__(self,name,age):
+4.	        self.name=name
+5.	self.age=age
+6.	def display(self):
+7.	        print("name = ",self.name)
+8.	        print("age = ",self.age)
+9.	#creating an object
+10.	ob1=Student("Rohit",21)
+11.	ob2=Student("Divanshi",20)
+12.	print ("Student.__doc__:", Student.__doc__) 
+13.	print ("Student.__name__:", Student.__name__) 
+14.	print ("Student.__module__:", Student.__module__) 
+15.	print ("Student.__bases__:", Student.__bases__) 
+16.	print ("Student.__dict__:",Student.__dict__ )
+
+
+
+
+Class Inheritance
+
+
+1.	class Parent:        
+2.	parentAttr = 100 
+3.	def __init__(self):
+4.	    print ("Calling parent constructor") 
+5.	defparentMethod(self): 
+6.	      print ('Calling parent method')  
+7.	defsetAttr(self, attr): 
+8.	Parent.parentAttr = attr
+9.	defgetAttr(self): 
+10.	      print ("Parent attribute :", Parent.parentAttr)  
+11.	class Child(Parent): # define child class 
+12.	def __init__(self): 
+13.	      print ("Calling child constructor")  
+14.	defchildMethod(self): 
+15.	      print ('Calling child method')  
+16.	c = Child()          
+17.	c.childMethod()      
+18.	c.parentMethod()     
+19.	c.setAttr(200)       
+20.	c.getAttr()          
+
+
+
+
+
+Multilevel inheritance
+
+
+1.	class Animal:
+2.	def eat(self):
+3.	        print('Eating...')
+4.	class Dog(Animal):  
+5.	def bark(self):  
+6.	      print ('Barking...')  
+7.	class BabyDog(Dog):  
+8.	def weep(self):  
+9.	        print ('Weeping...')  
+10.	d=BabyDog()  
+11.	d.eat()  
+12.	d.bark()  
+13.	d.weep()  
+
+
+
+
+Multiple inheritance
+
+
+1.	class First(object):  
+2.	def __init__(self):  
+3.	    super(First, self).__init__()  
+4.	    print("first")  
+5.	
+6.	class Second(object):  
+7.	def __init__(self):  
+8.	    super(Second, self).__init__()  
+9.	    print("second")  
+10.	
+11.	class Third(Second, First):  
+12.	def __init__(self):  
+13.	    super(Third, self).__init__()  
+14.	    print("third")  
+
+
+
+
+
+Why super () keyword
+
+
+1.	class omnivores:
+2.	def __init__(self,omni):
+3.	        print(omni,"are omnivores")
+4.	class human(omnivores):
+5.	def __init__(self):
+6.	        print('omnivores are those whole eat both animals and plants')
+7.	        super().__init__("humans")
+8.	obj=human()
+
+
+
+
+
+Overriding methods
+
+
+1.	class Parent:         
+2.	defmyMethod(self): 
+3.	      print ('Calling parent method')  
+4.	class Child(Parent):  
+5.	defmyMethod(self): 
+6.	      print ('Calling child method')  
+7.	c = Child()           
+8.	c.myMethod()         
+
+
+
+
+1.	Program to find the area of a rectangle using classes
+a.	class rectangle():
+b.	def __init__(self,breadth,length):
+c.	self.breadth=breadth
+d.	self.length=length
+e.	def area(self):
+f.	        return self.breadth*self.length
+g.	a=int(input("Enter length of rectangle: "))
+h.	b=int(input("Enter breadth of rectangle: "))
+i.	obj=rectangle(a,b)
+j.	print("Area of rectangle:",obj.area())
+k.	print()
+
+
+
+
+
+
+
+2.	Program to create a class in which one method accepts the string and the other displays it
+a.	class print1():
+b.	def __init__(self):
+c.	self.string=""
+d.	def get(self):
+e.	self.string=input("Enter string: ")
+f.	def put(self):
+g.	        print("String is:")
+h.	        print(self.string) 
+i.	obj=print1()
+j.	obj.get()
+k.	obj.put()
+
+
+
+
+
+
+
+3.	Program to append, delete and display elements of a list using classes
+a.	class Class perform:
+b.	def __init__(self,l1):
+c.	self.n=l1
+d.	def add(self,a):
+e.	        return self.n.append(a)
+f.	def remove(self,b):
+g.	        return self.n.remove(b)
+h.	def display(self):
+i.	        return (self.n)
+j.	l1=[2,4,66,56,34]
+k.	obj=perform(l1)
+l.	n=int(input("enter number to append: "))
+m.	obj.add(n)
+n.	print(obj.display())
+o.	n=int(input("enter element to be removed: "))
+p.	obj.remove(n)
+q.	print(obj.display())
+
+
+
+
+
+
+
+4.	Program to overload ‘ '* ’' operator
+a.	class A:
+b.	def __init__(self,x):
+c.	self.x=x
+d.	def __mul__(self,other):
+e.	        print("First number ",self.x)
+f.	        print("Second number ",other.x)
+g.	        print("Multiplication is ",self.x*other.x)
+h.	a=int(input("Enter first number: "))
+i.	ob1=A(a)
+j.	b=int(input("Enter second number: "))
+k.	ob2=A(b)
+l.	ob3=ob1*ob2
+
+
+
+
+
+
+
+5.	Program to find area of rectangle using classes
+a.	class rect:
+b.	def __init__(self,breadth,length):
+c.	self.breadth=breadth
+d.	self.length=length
+e.	def area(self):
+f.	        return self.breadth*self.length
+g.	a=int(input("Enter length: "))
+h.	b=int(input("Enter breadth: "))
+i.	obj=rect(a,b)
+j.	print("Area is ",obj.area())
+
+
+
+
+
+
+6.	Program to check whether a class is subclass of another
+a.	classBase(object):
+b.	    pass   # Empty Class
+c.	 
+d.	classDerived(Base):
+e.	    pass   # Empty Class
+f.	 
+g.	# Driver Code
+h.	print(issubclass(Derived, Base))
+i.	print(issubclass(Base, Derived))
+j.	 
+k.	d =Derived()
+l.	b =Base()
+m.	 
+n.	# b is not an instance of Derived
+o.	print(isinstance(b, Derived))
+p.	 
+q.	# But d is an instance of Base
+r.	print(isinstance(d, Base))
+
+
+
+
+
+
+
+7.	Program to implement inheritance
+a.	# Base or Super class
+b.	classPerson(object):
+c.	    def__init__(self, name):
+d.	        self.name =name
+e.	         
+f.	    defgetName(self):
+g.	        returnself.name
+h.	     
+i.	    defisEmployee(self):
+j.	        returnFalse
+k.	 
+l.	# Inherited or Subclass (Note Person in bracket)
+m.	classEmployee(Person):
+n.	    def__init__(self, name, eid):
+o.	 
+p.	        ''' In Python 3.0+, "super().__init__(name)"
+q.	            also works'''
+r.	        super(Employee, self).__init__(name)
+s.	        self.empID =eid
+t.	         
+u.	    defisEmployee(self):
+v.	        returnTrue
+w.	         
+x.	    defgetID(self):
+y.	        returnself.empID
+z.	 
+aa.	# Driver code
+bb.	emp =Employee("Geek1", "E101") 
+cc.	print(emp.getName(), emp.isEmployee(), emp.getID())
+
+
+
+
+

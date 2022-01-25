@@ -1,0 +1,287 @@
+While Loop
+
+1.	>>> n=1
+2.	>>> while(n<=5):
+3.	 print("Hello")
+4.	 n+=1
+
+
+FOR Loop
+
+1.	# List of numbers
+2.	numbers = [6,5,3,8,4,2,5,4,11]  
+3.	# variable to store the sum
+4.	sum total = 0 
+5.	# iterate over the list
+6.	for val in numbers:
+7.	    sum total = sumtotal+totalval
+8.	# print the sum print("The sum is",sumtotal)
+9.	print("sum is ",sumtotal)
+
+
+
+Range() Function
+
+1.	n=5
+2.	for i in range(0,n+1):
+3.	       print(“("Hello”)")
+
+
+Break
+
+1.	n=1
+2.	while(n<=10):
+3.	    if(n==5):
+4.	        break
+5.	    print(n)
+6.	    n+=1
+
+
+Continue
+
+1.	n=0
+2.	while(n<=10):
+3.	    n+=1
+4.	    if(n==5):
+5.	        continue
+6.	    print(n)
+
+
+Pass
+
+1.	a="hello"
+2.	for i in range(len(a)):
+3.	    if a[i]=='e':
+4.	       print("this is a pass statement")
+5.	    print(a[i])
+
+
+Loop Else
+
+1.	n=1
+2.	while(n<=5):
+3.	    print(n)
+4.	    n+=1
+5.	else:
+6.	    print("hello")
+
+
+Nested Loops
+
+1.	i=1
+2.	for i in range(0,5):
+3.	      for j in range(0,5):
+4.	 print("*",end=" ")
+5.	      print()
+
+
+Infinite Loop
+
+1.	n=1
+2.	while(n<=5):   #this constructs an infinite loop
+3.	    a=int(input("Enter a number"))
+4.	    print("you entered ",a)
+
+
+Iterating Examples
+1. Write a program to find factorial of a number.
+1.	n=int(input("Enter a number: "))
+2.	fact=1
+3.	for i in range(1,n+1):
+4.	    fact=fact*i
+5.	print("Factorial of %d is %d"%(n,fact))
+
+
+
+Write a program to input a number and print its table.
+1.	num=int(input("Enter a number: "))
+2.	l=int(input("Enter limit: "))
+3.	print("Table of ",num)
+4.	for i in range(1,l+1):
+5.	    print("%d X %d = %d"%(num,i,num*i))
+
+
+Write a program to find whether a number is prime or not.
+1.	n=int(input("Enter a number: "))
+2.	flag=0
+3.	for i in range(2,(n//2)+1):
+4.	    if(n%i==0):
+5.	        flag=1
+6.	        break
+7.	if(flag==0):
+8.	    print("%d is a Prime number"%(n))
+9.	else:
+10.	    print("%d is not a Prime number"%(n))
+
+Write a program to print all prime numbers between 2 numbers m and n.
+1.	m=int(input("Enter the lower limit: "))
+2.	n=int(input("Enter the upper limit: "))
+3.	print("Prime numbers between %d and %d are: "%(m,n))
+4.	for i in range(m,n+1):
+5.	    flag=0
+6.	    for j in range(2,(i//2)+1):
+7.	        if(i%j==0)a:
+8.	            flag=1
+9.	            break
+10.	    if(flag==0):
+11.	        print(i)
+
+
+Write a program to find whether the number is Armstrong or not.
+1.	a=input("Enter a number: ")
+2.	l=len(a)
+3.	a=int(a)
+4.	orig=a
+5.	sum=0
+6.	while(a>0):
+7.	    temp=a%10
+8.	    sum=sum+(temp**l)
+9.	    a=a//10
+10.	if(sum==orig):
+11.	    print("Armstrong number")
+12.	else:
+13.	    print("Not an Armstrong number")
+
+
+
+Write a program to print the Fibonacci Series.
+
+1.	a=int(input("Enter a number"))
+2.	f=0
+3.	s=1
+4.	i=1
+5.	print("The Fibonacci series is")
+6.	print(f,end=" ")  
+7.	print(s,end=" ")
+8.	while(i<=(a-2)):
+9.	    t=f+s
+10.	    print(t,end=" ")
+11.	    f=s
+12.	    s=t
+13.	    i+=1
+
+Write a code to print the sum of the digits of a number.
+1.	a=int(input("Enter a number :"))
+2.	sum=0
+3.	while(a>0):
+4.	    temp=a%10
+5.	    sum=sum+temp
+6.	    a=a//10
+7.	print("Sum of the digits is ",sum)
+
+
+Write a program to find whether a number is a palindrome or not.
+1.	a=int(input("Enter a number :"))
+2.	orig=a
+3.	sum=0
+4.	while(a>0):
+5.	    temp=a%10
+6.	    sum=sum*10+temp
+7.	    a=a//10
+8.	if(sum==orig):
+9.	    print("Palindrome")
+10.	else:
+11.	    print("Not Palindrome")
+
+
+Write a program to print the following pattern:
+
+
+1.	for i in range(1,5):
+2.	    for j in range(1,i+1):
+3.	        print("*",end=" ")
+4.	    print()
+
+
+Write a program to print the pattern:
+
+
+
+1.	i=1
+2.	for i in range(0,5+1):
+3.	      for j in range(0,i):
+4.	          print(i,end=" ")
+5.	      print()
+
+
+
+Write a program to print the pattern
+
+
+
+1.	i=1
+2.	for i in range(1,5+1):
+3.	      for j in range(1,i+1):
+4.	          print(j,end=" ")
+5.	      print()
+
+
+Write a program to print the pattern
+
+
+
+
+
+
+1.	n=5
+2.	for i in range(n):
+3.	    for j in range(i):
+4.	        print('*',end="")
+5.	    print()
+6.	for i in range(n,0,-1):
+7.	    for j in range(i):
+8.	        print('*',end="")
+9.	    print()
+
+
+Write a program to print the pattern.
+
+
+1.	for i in range(1,5+1):
+2.	for k in range(1,5-i+1):
+3.	        print(end=" ")
+4.	    for j in range(1,2*i):
+5.	        print("*",end="")
+6.	    print()
+
+
+
+Write a program to print the pattern
+
+
+1.	k=1
+2.	for i in range(1,5):
+3.	    for j in range(1,i+1):
+4.	        print(k,end="")
+5.	        k+=1
+6.	    print()
+
+
+WAP to print the Fibonacci series using iterator and generator.
+
+1.	import sys 
+2.	def Fibonacci(n): #generator function 
+3.	    a, b, counter = 0, 1, 0 
+4.	    while True: 
+5.	        if (counter > n):  
+6.	            return 
+7.	        yield a 
+8.	        a, b = b, a + b 
+9.	        counter += 1 
+10.	f = Fibonacci(5) #f is iterator object  
+11.	while True: 
+12.	   try: 
+13.	      print (next(f), end=" ") 
+14.	   except Stop Iteration: 
+15.	sys.exit()
+
+
+
+
+
+
+
+
+
+
+

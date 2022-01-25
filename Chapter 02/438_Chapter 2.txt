@@ -1,0 +1,53 @@
+									
+										Chapter 2 - Basic  Syntax
+
+Interactive Mode Programming
+
+On Linux
+1.	$ python 
+2.	Python 3.3.2 (default, Dec 10 2013, 11:35:01) 
+3.	[GCC 4.6.3] on Linux 
+4.	Type "help", "copyright", "credits", or "license" for more information. 
+
+On Windows
+1.	Python 3.4.3 (v3.4.3:9b73f1c3e601, Feb 24 2015, 22:43:06) [MSC v.1600 32 bit (Intel)] on win32 
+2.	Type "copyright", "credits" or "license()" for more information. 
+
+
+Program Output and Print Statement
+
+1.	print ("Hello, Python!")
+1.	print("%s is number %d" %("python",1))
+
+
+Script Mode Programming
+
+1.	#!/usr/bin/python3 
+2.	print ("Hello, Python!")
+
+
+Multi-line Statements
+
+1.	total = item_one + \ 
+2.	item_two + \ 
+3.	item_three
+
+
+Quotations used in Python
+
+1.	Name = 'XYZ' 
+2.	Fathername = "ABC DEF"
+3.	About = """I love Python.
+4.	I can study it the whole day."""
+5.	print(Name)
+6.	print(Fathername)
+
+
+Comments in Python
+
+1.	#a is initialized to hello
+2.	a="hello"
+3.	#we will print hello now
+4.	print(a)
+
+

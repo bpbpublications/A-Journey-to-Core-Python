@@ -1,0 +1,211 @@
+Objective
+
+1.	s="hello"
+2.	int(s)
+3.	Traceback (most recent call last):
+4.	  File "<pyshell#1>", line 1, in <module>
+5.	int(s)
+6.	ValueError: invalid literal for int() with base 10: 'hello'
+
+
+
+
+Python Assertions 
+
+1.	defavg(list1):
+2.	    length=len(list1)
+3.	    assert length!=0,"List is empty"
+4.	    sum=0
+5.	    for i in list1:
+6.	        sum+=i
+7.	    return sum/length
+8.	l1=[10,20,30,40,50]
+9.	print("average of list is ",avg(l1))
+10.	l2=[]
+11.	print("average of list is ",avg(l2))
+
+
+
+
+Handling an exception
+
+1.	def test():
+2.	    try:
+3.	        x = int(input("Please enter a small positive integer: "))
+4.	        print("you entered ",x)
+5.	    except ValueError:
+6.	        print("This is not an integer value ")
+7.	test()
+8.	test()
+
+
+
+The except clause with else clause
+
+
+1.	def test():
+2.	    try:
+3.	        a=int(input("Enter an integer: "))
+4.	    except ValueError:
+5.	        print("This is not an integer value")
+6.	    else:
+7.	        print("Square of %d is %d" %(a,a*a))
+8.	test()
+9.	test()
+
+
+With no exceptions except close
+
+1.	try:
+2.	    a=int(input("enter 1st number: "))
+3.	    b=int(input("enter 2nd number: "))
+4.	ans=a/b
+5.	    print("After dividing first by second we get: ",ans)
+6.	except:
+7.	    print("Something went wrong")
+
+
+
+The except clause with multiple exceptions
+
+1.	while True:
+2.	    try:
+3.	        a=int(input("enter an integer "))
+4.	ans=float(a)
+5.	        print("value of ",a,"in float is ",ans)
+6.	        break
+7.	    except(ValueError,TypeError):
+8.	        print("something went wrong")
+9.	        print("enter again\n")
+
+
+1.	def test():
+2.	    try:
+3.	        a=int(input("enter an integer: "))
+4.	    except ValueError:
+5.	        print("You have not entered an integer")
+6.	    except KeyboardInterrupt:
+7.	        print("You have interrupted the keyboard")
+8.	    except EOFError:
+9.	        print("You have done end of file operation")
+10.	    else:
+11.	        print("You entered ",a)
+12.	test()
+13.	test()
+14.	test()
+
+
+
+
+Try-finally clause
+
+1.	try: 
+2.	fh = open("testfile", "w") 
+3.	fh.write("This is my test file for exception handling!!") 
+4.	finally: 
+5.	   print ("Error: can\'t find file or read data") 
+6.	fh.close()
+
+
+
+1.	try: 
+2.	fh = open("testfile", "w") 
+3.	   try: 
+4.	fh.write("This is my test file for exception handling!!")
+5.	   finally: 
+6.	      print ("Going to close the file") 
+7.	fh.close() 
+8.	except IOError:    ##Exception 
+9.	   print ("Msg: can\'t find file or read data")
+
+
+
+
+With statement
+
+
+1.	f = None
+2.	try:
+3.	    f = open("f:\\first.txt",'r')        
+4.	    while True:
+5.	        line = f.readline()
+6.	        if len(line) == 0:
+7.	            break
+8.	        print(line)
+9.	except IOError:
+10.	    print ("Could not find file my_file.txt")
+11.	except KeyboardInterrupt:
+12.	    print ("!! You cancelled the reading from the file.")
+13.	finally:
+14.	    if f:
+15.	f.close()
+16.	    print ("Cleaning up: Closed the file")
+
+
+
+
+
+Argument of an exception
+
+
+1.	try:
+2.	    a=int(input("Enter a number: "))
+3.	    print("You entered ")
+4.	except ValueError as Argument:
+5.	    print("The argument does not contain numbers\n   ",Argument)  
+
+
+
+Raising an exception
+
+
+1.	def test():
+2.	  try:
+3.	    a=int(input("enter a number between 25 and 40: "))
+4.	    if a>40 or a<25:
+5.	      raise ValueError("Out of range")
+6.	    print("you entered ",a)
+7.	  except ValueError as ve:
+8.	    print(ve)
+9.	test()
+10.	test()
+
+
+
+User-defined exceptions
+
+1.	class Error(Exception):
+2.	    pass
+3.	class ValSmallError(Error):
+4.	    pass
+5.	class ValLargeError(Error):
+6.	    pass
+7.	ll=10
+8.	up=20
+9.	while True:
+10.	    try:
+11.	        n=int(input("enter any number"))
+12.	        if n<ll:
+13.	            raise ValSmallError
+14.	elif n>up:
+15.	            raise ValLargeError
+16.	        break
+17.	    except ValSmallError:
+18.	       print("this value is very small")
+19.	       print("------------------------------")
+20.	    except ValLargeError:
+21.	       print("this value is very large")
+22.	       print("------------------------------")
+23.	print("you guessed number between the range")
+
+
+
+
+
+
+
+
+
+
+
+
